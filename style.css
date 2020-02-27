@@ -1,0 +1,35 @@
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+p {
+  color: #FFFFFF;
+  text-shadow: rgb(19, 20, 21) 0px 0px 2px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* Centered text */
+.centered {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
