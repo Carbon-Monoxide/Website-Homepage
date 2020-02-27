@@ -1,4 +1,4 @@
-Homepage \(0_0)/
+Homepage \ ゜o゜)ノ
 =================
 
 https://carbonmonoxide.ga
