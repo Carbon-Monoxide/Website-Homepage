@@ -1,8 +1,5 @@
-// For server side
 var http = require("http");
 var fs = require("fs");
-
-const port = 8000;
 
 http
   .createServer(function(request, response) {
@@ -31,8 +28,7 @@ http
       response.end();
     }
   })
-  .listen(port);
-console.log ('Listening on port ' + port + '!');
+  .listen(8000);
 
 function sendFileContent(response, fileName, contentType) {
   fs.readFile(fileName, function(err, data) {
