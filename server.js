@@ -11,13 +11,13 @@ http
         "<b>Hey there!</b><br /><br />This is the default response. Requested URL is: " +
           request.url
       );
-    } else if (/\*.js$/.test(request.url.toString())) {
+    } else if (/.*\.js$/.test(request.url.toString())) {
       sendFileContent(
         response,
         request.url.toString().substring(1),
         "text/javascript"
       );
-    } else if (/\*.css$/.test(request.url.toString())) {
+    } else if (/.*\.css$/.test(request.url.toString())) {
       sendFileContent(
         response,
         request.url.toString().substring(1),
