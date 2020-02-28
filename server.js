@@ -4,7 +4,7 @@ var fs = require("fs");
 http
   .createServer(function(request, response) {
     if (request.url === "/") {
-      sendFileContent(response, "index.html", "text/html");
+      sendFileContent(response, "./index.html", "text/html");
     } else if (request.url === "/") {
       response.writeHead(200, { "Content-Type": "text/html" });
       response.write(
