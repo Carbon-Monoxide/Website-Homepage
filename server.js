@@ -1,7 +1,7 @@
-var https = require("https");
+var http = require("http");
 var fs = require("fs");
 
-https
+http
   .createServer(function(request, response) {
     if (request.url === "/") {
       sendFileContent(response, "./index.html", "text/html");
