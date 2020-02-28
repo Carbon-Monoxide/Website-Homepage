@@ -28,7 +28,7 @@ http
       response.end();
     }
   })
-  .listen(5050);
+  .listen(8000);
 
 function sendFileContent(response, fileName, contentType) {
   fs.readFile(fileName, function(err, data) {
