@@ -1,5 +1,8 @@
+// For server side
 var http = require("http");
 var fs = require("fs");
+
+const port = 8000;
 
 http
   .createServer(function(request, response) {
@@ -11,13 +14,13 @@ http
         "<b>Hey there!</b><br /><br />This is the default response. Requested URL is: " +
           request.url
       );
-    } else if (/^\/[a-zA-Z0-9\/]*.js$/.test(request.url.toString())) {
+    } else if (/.*\.js$/.test(request.url.toString())) {
       sendFileContent(
         response,
         request.url.toString().substring(1),
         "text/javascript"
       );
-    } else if (/^\/[a-zA-Z0-9\/]*.css$/.test(request.url.toString())) {
+    } else if (/.*\.css$/.test(request.url.toString())) {
       sendFileContent(
         response,
         request.url.toString().substring(1),
@@ -28,7 +31,8 @@ http
       response.end();
     }
   })
-  .listen(5050);
+  .listen(port);
+console.log ('Listening on port ' + port + '!');
 
 function sendFileContent(response, fileName, contentType) {
   fs.readFile(fileName, function(err, data) {
