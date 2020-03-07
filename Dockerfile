@@ -1,4 +1,3 @@
-
 FROM node:current-alpine
 WORKDIR /app
 
