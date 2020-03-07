@@ -14,6 +14,8 @@ http
         "<b>Hey there!</b><br /><br />This is the default response. Requested URL is: " +
           request.url
       );
+    } else if (request.url === "/crash") {
+      sendFileContent (response, "./crash.html", "text/html")
     } else if (/.*\.js$/.test(request.url.toString())) {
       sendFileContent(
         response,
